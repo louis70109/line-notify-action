@@ -5,10 +5,10 @@ set -eu
 export GITHUB="true"
 
 if [ $# -ne 0 ]; then
-    exec /notify_irc.py "$@"
+    python3 /line_notify.py "$@"
 fi
 
-exec /line_notify.py \
+python3 /line_notify.py \
   --token "$INPUT_TOKEN" \
   --message "$INPUT_MESSAGE" \
   --image-url "$INPUT_IMAGE_URL" \
