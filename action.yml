@@ -1,0 +1,30 @@
+name: 'LINE Notify Message'
+description: 'Sending a LINE Notify message'
+author: 'NiJia Lin'
+inputs:
+  token:
+    description: 'LINE Notify access_token'
+    required: true
+  message:
+    description: 'Your message'
+    required: true
+  file:
+    description: 'Send file for LINE Notify'
+    required: false
+  sticker_id:
+    description: 'LINE sticker id'
+    required: false
+  package_id:
+    description: 'LINE sticker package id'
+    required: false
+  image_url:
+    description: 'https url'
+    required: false
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
+branding:
+  icon: 'message-square'
+  color: 'blue'
