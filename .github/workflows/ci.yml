@@ -6,22 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: send custom message with args
-        uses: ./
-        with:
-          token: ${{ secrets.LINE_NOTIFY_TOKEN }}
-          message: The ${{ github.event_name }} event triggered first step.
-
-      - name: send message useing with
+      - name: send message
         uses: ./
         with:
           token: ${{ secrets.LINE_NOTIFY_TOKEN }}
           message: |
-            The ${{ github.event_name }} event triggered second step.
+            Triggered ${{github.repository}}'s ${{ github.event_name }} event.
             show the github varable ref: ${{ github.ref }}
             show the github varable commit: ${{ github.sha }}
-            show the github varable ref: {{ commit.ref }}
-            show the github varable commit: {{ commit.sha }}
             Commit Message: ${{ github.event.head_commit.message }}
 
       - name: send custom message
