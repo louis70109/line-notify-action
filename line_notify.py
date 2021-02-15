@@ -1,4 +1,5 @@
 import argparse
+
 from lotify.client import Client
 
 if __name__ == '__main__':
@@ -10,13 +11,13 @@ if __name__ == '__main__':
     parser.add_argument("--sticker-id", help="LINE sticker id")
     parser.add_argument("--package-id", help="LINE package id")
     args = parser.parse_args()
-    if image:
+    if args.image_url:
         lotify.send_message_with_image_url(
             message=args.message,
             access_token=args.token,
             image_fullsize=args.image_url,
             image_thumbnail=args.image_url)
-    elif sticker_id and package_id:
+    elif args.sticker_id and args.package_id:
         lotify.send_message_with_sticker(
             message=args.message,
             access_token=args.token,
