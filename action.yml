@@ -18,7 +18,10 @@ inputs:
     description: 'LINE sticker package id'
     required: false
   image_url:
-    description: 'https url'
+    description: 'Image https url'
+    required: false
+  image_file:
+    description: 'Image file path'
     required: false
 
 runs:
