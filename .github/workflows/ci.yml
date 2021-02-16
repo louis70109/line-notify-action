@@ -31,4 +31,4 @@ jobs:
             token: ${{ secrets.LINE_NOTIFY_TOKEN }}
             message: |
               ${{github.repository}} send image test.
-            image_url: './tests/image1.png'
+            image_url: 'https://raw.githubusercontent.com/louis70109/line-notify-action/master/tests/image1.png'

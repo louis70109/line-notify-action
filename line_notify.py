@@ -8,6 +8,7 @@ if __name__ == '__main__':
     parser.add_argument("--token", required=True, help="LINE Notify access_token")
     parser.add_argument("--message", required=True, help="LINE Notify message")
     parser.add_argument("--image-url", help="Image url")
+    parser.add_argument("--image-file", help="Image file")
     parser.add_argument("--sticker-id", help="LINE sticker id")
     parser.add_argument("--package-id", help="LINE package id")
     args = parser.parse_args()
