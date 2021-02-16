@@ -26,10 +26,11 @@ if __name__ == '__main__':
             sticker_package_id=args.package_id
         )
     elif args.image_file:
+        print(args.image_file)
         lotify.send_message_with_image_file(
             message=args.message,
             access_token=args.token,
-            file=open(args.image_file, 'rb')
+            file=open(args.image_file, 'rb').read()
         )
 
     else:
