@@ -26,9 +26,9 @@ jobs:
           sticker_id: 1
           package_id: 1
       - name: send image url message
-          uses: ./
-          with:
-            token: ${{ secrets.LINE_NOTIFY_TOKEN }}
-            message: |
-              ${{github.repository}} send image test.
-            image_url: 'https://raw.githubusercontent.com/louis70109/line-notify-action/master/tests/image1.png'
+        uses: ./
+        with:
+          token: ${{ secrets.LINE_NOTIFY_TOKEN }}
+          message: |
+            ${{github.repository}} send image test.
+          image_url: 'https://raw.githubusercontent.com/louis70109/line-notify-action/master/tests/image1.png'
