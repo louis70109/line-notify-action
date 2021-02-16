@@ -14,12 +14,21 @@ jobs:
             Triggered ${{github.repository}}'s ${{ github.event_name }} event.
             show the github varable ref: ${{ github.ref }}
             show the github varable commit: ${{ github.sha }}
-            Commit Message: ${{ github.event.head_commit.message }}
+            Commit: ${{ github.event.head_commit.message }}
 
-      - name: send custom message
+      - name: send sticker message
         uses: ./
         with:
           token: ${{ secrets.LINE_NOTIFY_TOKEN }}
           message: |
             The ${{ github.event_name }} event triggered final step.
             echo This event is a pull request that had an assignee removed.
+          sticker_id: 1
+          package_id: 1
+      - name: send image url message
+          uses: ./
+          with:
+            token: ${{ secrets.LINE_NOTIFY_TOKEN }}
+            message: |
+              ${{github.repository}} send image test.
+            image_url: './tests/image1.png'
