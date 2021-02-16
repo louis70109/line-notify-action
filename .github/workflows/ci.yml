@@ -38,4 +38,4 @@ jobs:
           token: ${{ secrets.LINE_NOTIFY_TOKEN }}
           message: |
             ${{github.repository}} send image file.
-          image_file: './tests/chatbot.png'
+          image_file: tests/chatbot.png
