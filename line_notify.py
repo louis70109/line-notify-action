@@ -25,5 +25,12 @@ if __name__ == '__main__':
             sticker_id=args.sticker_id,
             sticker_package_id=args.package_id
         )
+    elif args.image_file:
+        lotify.send_message_with_image_file(
+            message=args.message,
+            access_token=args.token,
+            file=open(args.image_file, 'rb')
+        )
+
     else:
         lotify.send_message(message=args.message, access_token=args.token)
