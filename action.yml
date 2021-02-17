@@ -28,6 +28,13 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.token }}
+    - ${{ inputs.message }}
+    - ${{ inputs.image_file }}
+    - ${{ inputs.image_url }}
+    - ${{ inputs.sticker_id }}
+    - ${{ inputs.package_id }}
 
 branding:
   icon: 'message-square'
