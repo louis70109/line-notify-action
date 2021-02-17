@@ -8,6 +8,7 @@ inputs:
   message:
     description: 'Your message'
     required: true
+    default: 'Hello LINE Notify'
   file:
     description: 'Send file for LINE Notify'
     required: false
