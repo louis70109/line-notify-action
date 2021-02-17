@@ -13,7 +13,7 @@ Let's get started to use it!
 ## Text message
 
 ```yaml
-- name: LINE Notify Message
+- name: send default message
   uses: louis70109/line-notify-action@master
   with:
     token: ${{ secrets.LINE_NOTIFY_TOKEN }}
@@ -23,7 +23,7 @@ Let's get started to use it!
 ## Text message and Sticker
 
 ```yaml
-- name: LINE Notify Message
+- name: send message with sticker
   uses: louis70109/line-notify-action@master
   with:
     token: ${{ secrets.LINE_NOTIFY_TOKEN }}
@@ -34,7 +34,7 @@ Let's get started to use it!
 ## Text message and Image (by URL)
 
 ```yaml
-- name: send image url message
+- name: send message with image url
   uses: louis70109/line-notify-action@master
   with:
     token: ${{ secrets.LINE_NOTIFY_TOKEN }}
@@ -46,7 +46,7 @@ Let's get started to use it!
 ## Text message and Image (by local file)
 
 ```yaml
-- name: send image file message
+- name: send message with image file
   uses: louis70109/line-notify-action@master
   with:
     token: ${{ secrets.LINE_NOTIFY_TOKEN }}

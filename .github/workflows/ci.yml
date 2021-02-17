@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: send message
+      - name: send default message
         uses: ./
         with:
           token: ${{ secrets.LINE_NOTIFY_TOKEN }}
@@ -16,7 +16,7 @@ jobs:
             show the github varable commit: ${{ github.sha }}
             Commit: ${{ github.event.head_commit.message }}
 
-      - name: send sticker message
+      - name: send message with sticker
         uses: ./
         with:
           token: ${{ secrets.LINE_NOTIFY_TOKEN }}
@@ -25,14 +25,16 @@ jobs:
             echo This event is a pull request that had an assignee removed.
           sticker_id: 1
           package_id: 1
-      - name: send image url message
+
+      - name: send message with image url
         uses: ./
         with:
           token: ${{ secrets.LINE_NOTIFY_TOKEN }}
           message: |
             ${{github.repository}} send image test.
           image_url: 'https://raw.githubusercontent.com/louis70109/line-notify-action/master/tests/image1.png'
-      - name: send image file message
+
+      - name: send message with image file
         uses: ./
         with:
           token: ${{ secrets.LINE_NOTIFY_TOKEN }}
