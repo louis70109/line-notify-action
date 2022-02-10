@@ -4,7 +4,7 @@
 
 The [line-notify-action](https://github.com/marketplace/actions/line-notify-actions) can send notification messages with LINE by GitHub Action.
 
-Let's get started to use it!
+Let's get started it!
 
 ![](https://nijialin.com/images/2021/line-notify-github-actions/result.png)
 
